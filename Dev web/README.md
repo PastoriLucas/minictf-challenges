@@ -1,6 +1,6 @@
 # Déroulement 
 
-Cette épreuve contien 5 flags différents a trouver répertorié en 5 épreuves différentes expliquées ci-dessous.
+Cette épreuve contient 5 flags différents a trouver répertorié en 5 épreuves différentes expliquées ci-dessous.
 
 ## 1 : J'aime les cookies
 
