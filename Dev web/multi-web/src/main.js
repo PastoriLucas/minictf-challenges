@@ -20,7 +20,7 @@ Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
 
-Vue.$cookies.set('flag', atob('RVBIQ3tUaGVfY29va2llX2lzX2FfbGllfQ=='));
+Vue.$cookies.set('flag', atob('Y3RmbGFne1RoZV9jb29raWVfaXNfYV9saWV9'));
 
 new Vue({
     router,

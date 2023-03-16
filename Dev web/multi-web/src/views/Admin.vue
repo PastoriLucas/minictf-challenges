@@ -35,7 +35,7 @@ export default {
     methods: {
         login(){
             if(this.username == 'admin' && this.password == 'Motivation'){
-                alert("i added a useless admin page to look more serious -_-, please don't tell to anybody i'll offer you this flag as a promise : "+ atob('RVBIQ3tINGNrZXJtNG59') );
+                alert("i added a useless admin page to look more serious -_-, please don't tell to anybody i'll offer you this flag as a promise : "+ atob('Y3RmbGFne0g0Y2tlcm00bn0=') );
             }
             else{
                 alert('Try again');
