@@ -29,7 +29,7 @@ export default {
 
     methods: {
         give(){
-            alert('get this : '+atob('RVBIQ3toaWRlX2FuZF9zZWVrfQ=='))
+            alert('get this : '+atob('Y3RmbGFne2hpZGVfYW5kX3NlZWt9'))
         },
     },
 }

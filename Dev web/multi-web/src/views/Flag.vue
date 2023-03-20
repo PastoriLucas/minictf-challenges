@@ -9,7 +9,7 @@ export default {
 
     data() {
         return {
-            flag : atob("RVBIQ3tiZXR0ZXJfdGhhbl90aGVfcm91dGVyfQ=="),
+            flag : atob("Y3RmbGFne2JldHRlcl90aGFuX3RoZV9yb3V0ZXJ9"),
         }
     },
 }
