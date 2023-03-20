@@ -38,30 +38,34 @@
           const constante = 5;
           constante = test;
           firstStep = firstStep + constante;
-          firstStep--;
+          firstStep = firstStep - 1;
         </code>
       </pre>
       <form>
         Solution : 
-        <input type="text">
+        <input v-model="soluce" type="text">
       </form>
       <div>
         <span>N'hésitez pas à faire des recherches internet pour les éléments non expliqués</span>
       </div>
     </div>
-    <RouterLink to="/condition"><button>next</button></RouterLink>
+    <button v-on:click="verificationSoluce">next</button>
 </template>
   
 <script>
   export default {
     data() {
       return {
-        
+        soluce : 0
       };
     },
 
     methods: {
-      
+      verificationSoluce(){
+        if(this.$data.soluce == '24'){
+          this.$router.push('/condition');
+        }
+      }
     },
   };
 </script>

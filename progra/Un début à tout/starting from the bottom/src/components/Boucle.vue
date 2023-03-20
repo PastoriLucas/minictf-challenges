@@ -22,29 +22,37 @@
       <pre>
         <code>
           var thirdStep = 4;
-          while (thirdStep &lt 120000000){
+          while (thirdStep &lt 1200000){
             thirdStep = thirdStep * thirdStep;
           }
         </code>
       </pre>
       <form>
         Solution : 
-        <input type="text">
+        <input v-model="soluce" type="text">
       </form>
       <div>
         <span>De nouveau, n'hésitez pas à faire des recherches internet pour les éléments non expliqués</span>
       </div>
     </div>
-    <RouterLink to="/hbo"><button>next</button></RouterLink>
+    <button v-on:click="verificationSoluce">next</button>
 </template>
   
 <script>
-  export default {
+ export default {
     data() {
       return {
-        
+        soluce : 0
       };
-    }
+    },
+
+    methods: {
+      verificationSoluce(){
+        if(this.$data.soluce == '4294967296'){
+          this.$router.push('/hbo');
+        }
+      }
+    },
   };
 </script>
   
