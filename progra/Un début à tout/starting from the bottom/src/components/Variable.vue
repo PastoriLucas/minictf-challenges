@@ -49,7 +49,7 @@
         <span>N'hésitez pas à faire des recherches internet pour les éléments non expliqués</span>
       </div>
     </div>
-    <button>Next</button>
+    <RouterLink to="/condition"><button>next</button></RouterLink>
 </template>
   
 <script>
@@ -58,7 +58,11 @@
       return {
         
       };
-    }
+    },
+
+    methods: {
+      
+    },
   };
 </script>
   

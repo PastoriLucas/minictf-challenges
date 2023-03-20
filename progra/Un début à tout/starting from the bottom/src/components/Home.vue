@@ -22,4 +22,10 @@
     color: white;
     padding-top: 12em;
   }
+  button{
+    margin-top: 2%;
+  }
+  h1{
+    margin-bottom: 2%;
+  }
 </style>
