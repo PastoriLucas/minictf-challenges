@@ -1,11 +1,11 @@
 <template>
     <div>
       <h2>Les Boucles</h2>
-      <span> Une boucle permet de répeter un certain nombre de fois une action dans un programme</span>
-      <span> Celles-ci peuvent être représentées de plusieurs manières mais dans notre cas, nous nous intéresserons au "while"</span>
+      <span> Une boucle permet de répéter un certain nombre de fois une action dans un programme.</span>
+      <span> Celles-ci peuvent être représentées de plusieurs manières mais dans notre cas, nous nous intéresserons au "while".</span>
       <pre>
         <code>
-            <span class="comments">// Imaginons que nous avons un nombre que nous voulons afficher dans la console en incrémentant à chaque affichage jusque 100
+            <span class="comments">// Imaginons que nous avons un nombre que nous voulons afficher dans la console en incrémentant à chaque affichage jusqu'à 100
             </span>
             <span class="comments">// Nous aurons alors comme code :</span> 
             var i = 0;
@@ -36,13 +36,17 @@
       </div>
     </div>
     <button v-on:click="verificationSoluce">next</button>
+    <p v-if="error.length" class="error">
+      <b>{{error}}</b>
+    </p>
 </template>
   
 <script>
  export default {
     data() {
       return {
-        soluce : 0
+        soluce : 0,
+        error : ""
       };
     },
 
@@ -50,6 +54,9 @@
       verificationSoluce(){
         if(this.$data.soluce == '4294967296'){
           this.$router.push('/hbo');
+        }
+        else{
+          this.$data.error = "Ce n'est pas la bonne réponse ;)"
         }
       }
     },
@@ -62,5 +69,8 @@
   }
   .comments{
     color: green;
+  }
+  .error{
+    color: red;
   }
 </style>

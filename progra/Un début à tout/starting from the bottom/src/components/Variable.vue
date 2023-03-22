@@ -8,7 +8,7 @@
             var monChiffre = 2;
         </code>
       </pre>
-      <span>Ceci permet de stocker la valeur 2 dans une variable nommée "monChiffre". Celle-ci peut-être appelée plus tard afin de récupérer la valeur étant dedans</span>
+      <span>Ceci permet de stocker la valeur 2 dans une variable nommée "monChiffre". Celle-ci peut-être appelée plus tard afin de récupérer la valeur étant dedans.</span>
       <pre>
         <code>
             Exemple : 
@@ -17,7 +17,7 @@
                 2
         </code>
       </pre>
-      <span> Les variables peuvent aussi est réatribuées pour changer la valeur la contenant</span>
+      <span> Les variables peuvent aussi être réattribuées pour changer la valeur qu'elles contiennent.</span>
       <pre>
         <code>
           Exemple :
@@ -50,13 +50,17 @@
       </div>
     </div>
     <button v-on:click="verificationSoluce">next</button>
+    <p v-if="error.length" class="error">
+      <b>{{error}}</b>
+    </p>
 </template>
   
 <script>
   export default {
     data() {
       return {
-        soluce : 0
+        soluce : 0,
+        error : ""
       };
     },
 
@@ -64,6 +68,9 @@
       verificationSoluce(){
         if(this.$data.soluce == '24'){
           this.$router.push('/condition');
+        }
+        else{
+          this.$data.error = "Ce n'est pas la bonne réponse ;)"
         }
       }
     },
@@ -76,5 +83,8 @@
   }
   .comments{
     color: green;
+  }
+  .error{
+    color: red;
   }
 </style>

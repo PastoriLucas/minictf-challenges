@@ -5,9 +5,9 @@
         La condition intervient chaque fois que le programmeur demande à la machine de faire un choix. 
         Une instruction conditionnelle se réalise si la condition est réalisée.
       </span>
-      <span> Les conditions sont pricipalement représentées par le mot "if" en programmation. Celui-ci sera souvent poursuivit par des parenthèses contenant la condition en elle-même et de crochets donnant l'action en cas de respect de la condition</span>
+      <span> Les conditions sont principalement représentées par le mot "if" en programmation. Celui-ci sera souvent poursuivi par des parenthèses contenant la condition en elle-même et des crochets donnant l'action en cas de respect de la condition.</span>
       <span>
-        Cela peut par exemple être utile dans le cas où un développeur veut permettre a quelqu'un de se connecter à un site.
+        Cela peut par exemple être utile dans le cas où un développeur veut permettre à quelqu'un de se connecter à un site.
       </span>
       <pre>
         <code>
@@ -48,13 +48,17 @@
       </div>
     </div>
     <button v-on:click="verificationSoluce">next</button>
+    <p v-if="error.length" class="error">
+      <b>{{error}}</b>
+    </p>
 </template>
   
 <script>
   export default {
     data() {
       return {
-        soluce : 0
+        soluce : 0,
+        error : ""
       };
     },
 
@@ -62,6 +66,9 @@
       verificationSoluce(){
         if(this.$data.soluce == '30'){
           this.$router.push('/boucle');
+        }
+        else{
+          this.$data.error = "Ce n'est pas la bonne réponse ;)"
         }
       }
     },
@@ -74,5 +81,8 @@
   }
   .comments{
     color: green;
+  }
+  .error{
+    color: red;
   }
 </style>
